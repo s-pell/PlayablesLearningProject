@@ -31,7 +31,7 @@ namespace Game
         {
             Debug.Log("LoadGameScene");
             GameManager.Instance.ChangeState(GameManager.GameState.Playing);
-            SceneManager.Instance.LoadSceneAsync("Game_1_base", LoadSceneMode.Additive, true).Forget();
+            SceneManager.Instance.LoadSceneAsync("Level_1", LoadSceneMode.Additive, true).Forget();
         }
 
         private void OnDisable()
