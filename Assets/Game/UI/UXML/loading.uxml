@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Game/UI/USS/progress_bar_uss.uss?fileID=7433441132597879392&amp;guid=49ff1fe219e98b44f82d5476fe7eab92&amp;type=3#progress_bar_uss" />
+    <ui:VisualElement name="background" style="flex-grow: 1; background-color: rgb(57, 96, 95);">
+        <ui:ProgressBar value="50" title="loading" name="loadingProgressBar" class="progress_bar_uss" style="-unity-background-image-tint-color: rgb(59, 242, 173); position: relative; top: 50%; left: 0%; border-left-color: rgb(79, 208, 171); border-bottom-color: rgb(79, 208, 171); border-right-color: rgb(79, 208, 171); border-top-color: rgb(79, 208, 171); border-top-width: 2px; border-bottom-width: 2px; border-right-width: 2px; border-left-width: 2px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: rgb(117, 132, 126);" />
+    </ui:VisualElement>
+</ui:UXML>

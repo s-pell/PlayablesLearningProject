@@ -1,0 +1,13 @@
+:root {
+    width: 80%;
+    align-self: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-left-color: rgb(67, 197, 66);
+    border-right-color: rgb(67, 197, 66);
+    border-top-color: rgb(67, 197, 66);
+    border-bottom-color: rgb(67, 197, 66);
+    padding-top: 50px;
+}
