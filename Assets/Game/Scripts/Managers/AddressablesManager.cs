@@ -45,5 +45,53 @@ namespace Game
             var handle = Addressables.UnloadSceneAsync(sceneInstance);
             await handle.ToUniTask();
         }
+
+        public async UniTask<GameObject> InstantiateAsync(string address, Vector3 position)
+        {
+            return await InstantiateAsync(address, position, Quaternion.identity);
+        }
+
+        public async UniTask<GameObject> InstantiateAsync(string address, Vector3 position, Quaternion rotation)
+        {
+            AsyncOperationHandle<GameObject> handle = Addressables.InstantiateAsync(address, position, rotation);
+            await handle.Task; 
+
+            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            {
+                Debug.Log("Префаб загружен и инстанцирован");
+                return handle.Result;
+            }
+            else
+            {
+                Debug.LogError("Ошибка загрузки префаба");
+                return null;
+            }
+        }
+
+        public async UniTask<GameObject> InstantiateAsync(AssetReference prefabReference)
+        {
+            var handle = prefabReference.InstantiateAsync();
+            await handle.Task; 
+
+            if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+            {
+                Debug.Log("Префаб загружен и инстанцирован");
+                return handle.Result;
+            }
+            else
+            {
+                Debug.LogError("Ошибка загрузки префаба");
+                return null;
+            }
+        }
+
+        public void ReleaseInstance(GameObject instance)
+        {
+            if (instance != null)
+            {
+                Addressables.ReleaseInstance(instance);
+                Debug.Log("Префаб выгружен");
+            }
+        }
     }
 }

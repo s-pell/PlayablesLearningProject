@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -69,6 +70,11 @@ namespace Game
         private async UniTaskVoid LoadGameScene()
         {
             await SceneManager.Instance.LoadScene("Core");//, LoadSceneMode.Additive, true);
+        }
+
+        private async void Unload(string name)
+        {
+            await SceneManager.Instance.UnloadSceneByName(name);
         }
     }
 }
