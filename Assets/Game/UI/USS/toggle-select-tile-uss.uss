@@ -1,0 +1,9 @@
+:root {
+
+}
+.toggle-select-tile {
+    padding: 0;
+}
+#unity-toggle__label {
+    margin-left: 4px; /* или меньше */
+}

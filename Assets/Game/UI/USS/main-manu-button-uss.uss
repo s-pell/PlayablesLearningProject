@@ -1,0 +1,10 @@
+:root {
+}
+
+.main_menu_button_uss {
+    min-height: 45px;
+    width: 200px;
+    align-items: center;
+    align-self: center;
+    align-content: flex-start;
+}
