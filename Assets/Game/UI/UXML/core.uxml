@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Game/UI/USS/level-select-button.uss?fileID=7433441132597879392&amp;guid=561f35744ff2b534b9f5eab6620dec2c&amp;type=3#level-select-button" />
+    <Style src="project://database/Assets/Game/UI/USS/toggle-select-tile.uss?fileID=7433441132597879392&amp;guid=5dbfd3bba1ef1714cbc82b821ceaf1c4&amp;type=3#toggle-select-tile" />
+    <ui:Button text="Level 1" name="level_1" class="level-select-button" style="align-items: flex-end; width: 200px; align-self: flex-end; -unity-font-definition: initial;" />
+    <ui:Button text="Level 2" name="level_2" class="level-select-button" style="-unity-font-definition: initial;" />
+    <ui:GroupBox style="right: 0;">
+        <ui:Toggle label="0_0" name="toggle_0_0" class="toggle-select-tile" style="-unity-font-definition: initial;" />
+        <ui:Toggle label="0_1" name="toggle_0_1" class="toggle-select-tile" style="-unity-font-definition: initial;" />
+        <ui:Toggle label="1_1" name="toggle_1_1" class="toggle-select-tile" style="-unity-font-definition: initial;" />
+        <ui:Toggle label="-1_1" name="toggle_-1_1" class="toggle-select-tile" style="-unity-font-definition: initial;" />
+    </ui:GroupBox>
+</ui:UXML>
