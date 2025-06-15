@@ -1,0 +1,393 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Environment
+  m_EditorClassIdentifier: 
+  m_GroupName: Environment
+  m_GUID: 0ae39578d6ec33b42aa43001afdf47dc
+  m_SerializeEntries:
+  - m_GUID: 01c8652440983d242b782c051b157c86
+    m_Address: Assets/Game/Unsorted/_Env_Bush_01 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a07cb6054de6cb47af92cc75f2b9814
+    m_Address: Assets/Game/Unsorted/FRP_Prop_AnimalFeeder_01.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a93cc0a7c9563748917a0e2b4237932
+    m_Address: Assets/Game/Unsorted/FRP_Prop_Berrel_02_A.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0dab83ccd831289428a4e3af51dca551
+    m_Address: Assets/Game/Unsorted/_Env_WoodFence_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ee30f68c8f7c374e91ca4ce58fa97ac
+    m_Address: Assets/Game/Unsorted/FRP_Prop_WoodenCrates_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fab23ce64854ee439abf9aadfd46c6f
+    m_Address: Assets/Game/Unsorted/_Env_Bush_02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fe7efa270b92494fb26e9fe5580b81d
+    m_Address: Assets/Game/Unsorted/FRP_Prop_FoodSack_01.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 107829be0684a7e4d99a78fe3777b348
+    m_Address: Assets/Game/Unsorted/Prop_Berrel_01.001 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12747f3b2f5c7df48afcba7c7cb21b72
+    m_Address: Assets/Game/Unsorted/FRP_Prop_BigFarmingTool_01.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18b715da9b46a1c489f21ad2f344e1de
+    m_Address: Assets/Game/Unsorted/FRP_Bld_Barn_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b24492d97f6be54fa2bdde774e22a13
+    m_Address: Assets/Game/Unsorted/Prop_Haystack_05 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22e80280a1e6dc04786c30b4c2fe01e6
+    m_Address: Assets/Game/Unsorted/FRP_Env_Bush_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2380bdb329bd65746a260601ac636051
+    m_Address: Assets/Game/Unsorted/_Env_Well_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28d5704c136f820458a934762767fa89
+    m_Address: Assets/Game/Unsorted/Prop_Berrel_02_A 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28e0a0268da2e074a9a6a5971fe1dddb
+    m_Address: Assets/Game/Unsorted/FRP_Prop_BigFarmingTool_07.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29b520f073104574da3b10ed701ba450
+    m_Address: Assets/Game/Unsorted/_Env_Tree_07 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c074fa93b3804742b651227112ede9d
+    m_Address: Assets/Game/Unsorted/Prop_Haystack_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f3f97ef5539ae4468a08363d45089dc
+    m_Address: Assets/Game/Unsorted/FRP_food_Carrot.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fff89c84baa17445812aa70c6ccc2e6
+    m_Address: Assets/Game/Unsorted/_food_Apple 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33936a981a91707499591795ecfbc2f3
+    m_Address: Assets/Game/Unsorted/_Env_WoodFence_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f201bb07357d6843a9a9430709d1727
+    m_Address: Assets/Game/Unsorted/FRP_Env_GrassPlant_03.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4af3fd8e350a1c54ba56a95a1ea64d9d
+    m_Address: Assets/Game/Unsorted/_Env_GrassPlant_03 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ede04875c5e8174daf384f19796af54
+    m_Address: Assets/Game/Unsorted/_Env_FarmLand_09_Watered 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5195a0fdf8adb2e4b8755f61713cb04a
+    m_Address: Assets/Game/Unsorted/Prop_Wheelbarrow 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 527db45afaa9df74a873583b75cb4b4b
+    m_Address: Assets/Game/Unsorted/FRP_Bld_Outhouses.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 539f2abbed0f0d74f9a346e40aed2190
+    m_Address: Assets/Game/Unsorted/FRP_Prop_BigFarmingTool_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 585c3e3c484d8b74394921d3a39dd807
+    m_Address: Assets/Game/Unsorted/Prop_FoodSack_01 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 596c7fbce9bccde49a0f154779355640
+    m_Address: Assets/Game/Unsorted/FRP_food_Radish.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b35ae57741d19549a517af9d9245abf
+    m_Address: Assets/Game/Unsorted/Prop_AnimalFeeder_01 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f18e73787af42941a2ed13c97f4cf19
+    m_Address: Assets/Game/Unsorted/Prop_Bucket_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 602e1fd9bb9c3c74db3296bc6f699264
+    m_Address: Assets/Game/Unsorted/Prop_WoodenBox_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6722ae278e363a4458c07f8c6d1e3a26
+    m_Address: Assets/Game/Unsorted/_Env_GrassPlant_01 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 673eed27029e9ab4b87e5db975249265
+    m_Address: Assets/Game/Unsorted/FRP_food_Apple.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67af3b908bd574c40aa8b4b7796889a3
+    m_Address: Assets/Game/Unsorted/Prop_WoodenBox_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b30b2f7f0422574796508ee44f3dc0f
+    m_Address: Assets/Game/Unsorted/food_Carrot 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6dcaac6ded95c334e855f6d318ad4caa
+    m_Address: Assets/Game/Unsorted/FRP_Prop_AnimalFeeder_03.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e7949f2ae722ea45afdeba8870d1737
+    m_Address: Assets/Game/Unsorted/FRP_Env_WoodFence_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70820cc42a5001347a5f0e0e0574dbdf
+    m_Address: Assets/Game/Unsorted/Prop_WoodenCrates_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7193e70c1c329994baec22ce392d1e7b
+    m_Address: Assets/Game/Unsorted/FRP_Env_FarmLand_02_Watered.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7230e480f6ce1cf438cedb9124f2d3d4
+    m_Address: Assets/Game/Unsorted/FRP_Prop_Berrel_01.001.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7289f137fc976784fa146d5993ea1df3
+    m_Address: Assets/Game/Unsorted/FRP_Prop_Haystack_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7413b6bc1e8f90f41be498c414a954ae
+    m_Address: Assets/Game/Unsorted/Prop_WoodenCrates_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74c841eea2333494db6d152030ede21a
+    m_Address: Assets/Game/Unsorted/_Env_Tree_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 756737c08ee6bf346ba8b791aa864da1
+    m_Address: Assets/Game/Unsorted/FRP_Bld_FarmMill_01_p1.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c624bd1572f33847909e3221f9fb50d
+    m_Address: Assets/Game/Unsorted/FRP_Prop_WoodenCrates_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f555c3b807279e4ba513a8f42215dcb
+    m_Address: Assets/Game/Unsorted/FRP_Env_Tree_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fc0e17a6e5fc6845ad217328ebd6563
+    m_Address: Assets/Game/Unsorted/FRP_Prop_WoodenBox_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 800f188a563228240b03492494cfd539
+    m_Address: Assets/Game/Unsorted/FRP_Env_Bush_01.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83f9fdd3fad4867468e01211f5b46243
+    m_Address: Assets/Game/Unsorted/FRP_Env_WoodFence_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87e580f755ab3334099983f1003648aa
+    m_Address: Assets/Game/Unsorted/_Env_FarmLand_02_Watered 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 885c33442ad046b4e958d83f64a40084
+    m_Address: Assets/Game/Unsorted/_food_Carrot 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95d09649b1704a34aa5b83b5702cebaf
+    m_Address: Assets/Game/Unsorted/FRP_Prop_WoodenChest_02_p1.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99a52c2e9b9915544ba867a1e6428b24
+    m_Address: Assets/Game/Unsorted/FRP_Bld_FarmMill_01_p2.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5411ed73d97f904cb4d3fd582180003
+    m_Address: Assets/Game/Unsorted/FRP_Env_FarmLand_09_Watered.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b47e933fe91ba5f44a58addf47bcfcd3
+    m_Address: Assets/Game/Unsorted/FRP_Env_Tree_07.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b69f4460af679044a846bc545ec3a28c
+    m_Address: Assets/Game/Unsorted/_Bld_Outhouses 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b737798a5b389bd4abeb17b82cf4546d
+    m_Address: Assets/Game/Unsorted/food_Radish 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc2c7e0e99a7cfe459fd0ddff4bb2dca
+    m_Address: Assets/Game/Unsorted/food_Pumpkin 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be1e2b4cf139a194e9972734a7918499
+    m_Address: Assets/Game/Unsorted/Prop_BigFarmingTool_01 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c1143f14dd1f14b48a7ecefc3aadf369
+    m_Address: Assets/Game/Unsorted/Prop_WoodenChest_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c576cdcb808c5154a9217274d69529ac
+    m_Address: Assets/Game/Unsorted/FRP_food_Pumpkin.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c64de85de52be9648896d0f67739ad0f
+    m_Address: Assets/Game/Unsorted/FRP_Prop_Haystack_05.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d266d68705f03fb4ea10a3a4bfbc8d7c
+    m_Address: Assets/Game/Unsorted/FRP_Prop_WoodenBox_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d55c33537ae53ba448d42f314d952ebb
+    m_Address: Assets/Game/Unsorted/_Bld_FarmMill_01 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5de8bf3d73cd94498a8e23e61e2cdd1
+    m_Address: Assets/Game/Unsorted/FRP_Prop_Wheelbarrow.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6c76c136ca93e84b9c03e15bb70f670
+    m_Address: Assets/Game/Unsorted/FRP_Prop_FoodSack_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d88bab6b38d3fa44cb12db928c30dc67
+    m_Address: Assets/Game/Unsorted/_Bld_Barn_02 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e40acfadd1bed354894bbbcf67802519
+    m_Address: Assets/Game/Unsorted/Prop_BigFarmingTool_07 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e57b211d8bbcec34eaa3135ccb721116
+    m_Address: Assets/Game/Unsorted/FRP_Env_GrassPlant_01.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7867a328dab847408cd9a37bd448a30
+    m_Address: Assets/Game/Unsorted/FRP_Prop_Bucket_04.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e80d8409762065343a0ae27bc32521c7
+    m_Address: Assets/Game/Unsorted/Prop_AnimalFeeder_03 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f02f7a5c37063c54dae6ce9915b8d111
+    m_Address: Assets/Game/Unsorted/Prop_BigFarmingTool_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f518a9517ac4c9848a3ed97cbe3c2db1
+    m_Address: Assets/Game/Unsorted/Prop_FoodSack_04 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe748d534374a1644a318b8af89b40c2
+    m_Address: Assets/Game/Unsorted/FRP_Env_Well_02.mesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c50d4de96c0468f418883ebb97251bef, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e42325687903cff4cb821b7d28c280a2, type: 2}
+    - {fileID: 11400000, guid: 072a9440db6538545ac1efef67a319ca, type: 2}

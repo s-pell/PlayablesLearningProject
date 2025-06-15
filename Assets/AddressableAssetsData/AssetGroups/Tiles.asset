@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Tiles
+  m_EditorClassIdentifier: 
+  m_GroupName: Tiles
+  m_GUID: 8b8a732f488755c49acd280be6f90a6a
+  m_SerializeEntries:
+  - m_GUID: 0aab457b3a2398747a427c2367f8be06
+    m_Address: 2__0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17c22043f5ce62b4ba7c271ea8eb1cdc
+    m_Address: 1__1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20919b3f577932e4b94d5262f82071b7
+    m_Address: 1__-1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36153237426b717468a8e78583bcf49a
+    m_Address: 2__1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fbe37d1bbbe0694b820d4f191c0fd2d
+    m_Address: 2__0_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 534d438fd243e6d4cb9c27a67ad90a21
+    m_Address: 1__0_0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ca3d37f7e2c2f34792add92ec21b70b
+    m_Address: 2__-1_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dafc459568ac4d64bab60c3e8317b8a2
+    m_Address: 1__0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c50d4de96c0468f418883ebb97251bef, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 459ad97b6f5d3b749b72fffb1fea3355, type: 2}
+    - {fileID: 11400000, guid: de72d239cdc301d4e819d7ed37167242, type: 2}

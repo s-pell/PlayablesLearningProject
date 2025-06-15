@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Materials
+  m_EditorClassIdentifier: 
+  m_GroupName: Materials
+  m_GUID: 75489a42ba6f2f74c9a8355674b6199a
+  m_SerializeEntries:
+  - m_GUID: 2089a076ea9c7c340b8919db3c61e863
+    m_Address: Assets/Game/CommonAssets/Materials/Field_2.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2880c0d1a2c60ec478efd822a241ad82
+    m_Address: Assets/Game/CommonAssets/Materials/Field.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9eab333de3abf14986102340f78d13c
+    m_Address: Assets/Game/CommonAssets/Materials/Field_1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1df608ab57806f4d9b36c38180bb999
+    m_Address: Assets/Game/CommonAssets/Materials/PandaMat 1.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c50d4de96c0468f418883ebb97251bef, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4d27dde60f3bedb458fa459f54a7f02c, type: 2}
+    - {fileID: 11400000, guid: b605901c91171c74d8c35613ffac88ad, type: 2}

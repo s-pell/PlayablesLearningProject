@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Fonts
+  m_EditorClassIdentifier: 
+  m_GroupName: Fonts
+  m_GUID: 43088a912e312bb4ca331934aba928a0
+  m_SerializeEntries:
+  - m_GUID: 6e59c59b81ab47f9b6ec5781fa725d2c
+    m_Address: Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff6222fb635c9b64ebba2ed1ba8fccac
+    m_Address: darla
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: c50d4de96c0468f418883ebb97251bef, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 65a54768093303c498c0320901408e22, type: 2}
+    - {fileID: 11400000, guid: 950b6725b8b105f488ea388a098f424f, type: 2}

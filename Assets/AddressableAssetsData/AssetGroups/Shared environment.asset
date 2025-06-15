@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Scenes
+  m_Name: Shared environment
   m_EditorClassIdentifier: 
-  m_GroupName: Scenes
-  m_GUID: 0232e0408c4d61d41b396369161d6ae7
+  m_GroupName: Shared environment
+  m_GUID: fe897f7707cddfd40b21f1b80fd72341
   m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c50d4de96c0468f418883ebb97251bef, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d210622cc1a773e4eb2dab5fb759b298, type: 2}
-    - {fileID: 11400000, guid: 555a61ff0a93e044787e694b4512e844, type: 2}
+    - {fileID: 11400000, guid: 6f5b8db4d7091e04abb603f03d43a1ab, type: 2}
+    - {fileID: 11400000, guid: 8d98fad676f59be47bd3fbec281a20ca, type: 2}
