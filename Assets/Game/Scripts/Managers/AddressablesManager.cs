@@ -51,7 +51,7 @@ namespace Game
             return await InstantiateAsync(address, position, Quaternion.identity);
         }
 
-        public async UniTask<GameObject> InstantiateAsync(string address, Vector3 position, Quaternion rotation)
+        private async UniTask<GameObject> InstantiateAsync(string address, Vector3 position, Quaternion rotation)
         {
             AsyncOperationHandle<GameObject> handle = Addressables.InstantiateAsync(address, position, rotation);
             await handle.Task; 

@@ -7,14 +7,6 @@ using UnityEngine.Serialization;
 
 namespace Game
 {
-    // public class LevelTilesConfig : ScriptableObject
-    // {
-    //     [SerializeField] private float spawnDepth = -2f;
-    //     [SerializeField] private int TileSideSize;
-    //     [SerializeField] private int SidePercentOffset;
-    //     [SerializeField] private int CheckDeltaTime;
-    // }
-
     public class LevelTilesController
     {
         private LevelTilesConfig _config;
@@ -106,15 +98,17 @@ namespace Game
         {
             if (Tiles.TryGetValue((col, row), out GameObject tile))
             {
-                if (tile != null)
-                {
-                    await HideTile(tile);
-                }
+                await HideTile(tile);
             }
         }
 
         private async UniTask HideTile(GameObject tile)
         {
+            if (tile == null)
+            {
+                return;
+            }
+
             await TweenTile(tile, false);
             tile.SetActive(false);
             tile.Release();
@@ -141,7 +135,7 @@ namespace Game
             bool isEvenCol = col % 2 == 0;
             var result = (col * WidthStep / 2f, (isEvenCol ? (Sqrt3 * _config.TileSideSize * 0.5f) : 0) +
                                                 row * Sqrt3 * _config.TileSideSize);
-            Debug.Log($"{col},{row} => {result}");
+            //Debug.Log($"{col},{row} => {result}");
             return (result);
         }
 
@@ -149,7 +143,6 @@ namespace Game
         {
             Tweener tween =
                 tile.transform.DOMoveY((on ? 0 : -1) * _config.SpawnDepth, _config.Duration);
-            //.DOMove(tile.transform.position + (on ? 1 : -1) * Vector3.up * _config.SpawnDepth, _config.Duration);
             await tween.AwaitForComplete();
         }
     }
