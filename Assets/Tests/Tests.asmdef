@@ -4,7 +4,12 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "GameAssembly"
+        "GameAssembly",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "UniTask",
+        "Zenject-TestFramework",
+        "Zenject"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

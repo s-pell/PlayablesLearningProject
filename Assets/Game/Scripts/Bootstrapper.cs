@@ -1,23 +1,21 @@
 using Cysharp.Threading.Tasks;
+using Game.Services;
 using UnityEngine;
 using UnityEngine.ResourceManagement.ResourceProviders;
+using Zenject;
 
 namespace Game
 {
-    public class Bootstrapper : MonoBehaviour
-    {
+    public class Bootstrapper : IInitializable {
+        private ISceneService _sceneService;
+        [Inject]
+        public Bootstrapper(ISceneService sceneService) {
+            _sceneService = sceneService;
+        }
         
-        private async void Start()
-        {
-            Debug.Log("Bootstrapper: Инициализация...");
-
-            // Здесь можно добавить инициализацию менеджеров, загрузку настроек и т.п.
-            await InitializeManagers();
-
-            Debug.Log("Bootstrapper: Инициализация завершена.");
-
-            // Загружаем следующую сцену (например, Loading или MainMenu)
-            await LoadNextScene("MainMenu");
+        public void Initialize() {
+            Debug.LogError("Bootstrapper: Инициализация завершена.");
+            LoadNextScene("MainMenu").Forget();
         }
 
         private async UniTask InitializeManagers()
@@ -35,10 +33,9 @@ namespace Game
             // И т.п.
         }
 
-        private async UniTask LoadNextScene(string sceneName)
-        {
-            Debug.Log($"Bootstrapper: Загрузка сцены {sceneName}...");
-            UniTask<SceneInstance> asyncOp = SceneManager.Instance.LoadSceneAsync(sceneName);
+        private async UniTask LoadNextScene(string sceneName) {
+            Debug.LogError($"Bootstrapper: Загрузка сцены {sceneName}...");
+            UniTask<SceneInstance> asyncOp = _sceneService.LoadSceneAsync(sceneName);
             await asyncOp;
             // while (!asyncOp.isDone)
             // {

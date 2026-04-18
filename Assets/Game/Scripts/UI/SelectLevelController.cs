@@ -4,6 +4,9 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Game;
+using Game.Services;
+using UnityEngine.SceneManagement;
+using Zenject;
 
 namespace Game.UI
 {
@@ -32,6 +35,12 @@ namespace Game.UI
         private VisualElement root;
         private Dictionary<Toggle, UITileToggle> _toggles = new Dictionary<Toggle, UITileToggle>(4);
         private Dictionary<Button, LevelTilesConfig> _configs = new Dictionary<Button, LevelTilesConfig>(2);
+        private SceneService _sceneService;
+
+        [Inject]
+        public void Construct(SceneService sceneService) {
+            _sceneService = sceneService;
+        }
 
         void OnEnable()
         {
@@ -69,11 +78,11 @@ namespace Game.UI
         {
             if (on)
             {
-                SceneManager.Instance.ShowTile(uiToggle.Col, uiToggle.Row);
+                _sceneService.ShowTile(uiToggle.Col, uiToggle.Row);
             }
             else
             {
-                SceneManager.Instance.HideTile(uiToggle.Col, uiToggle.Row);
+                _sceneService.HideTile(uiToggle.Col, uiToggle.Row);
             }
         }
 
@@ -101,7 +110,7 @@ namespace Game.UI
 
         private Action OnLevelClicked(LevelTilesConfig config)
         {
-            return () => SceneManager.Instance.SelectLevel(config);
+            return () => _sceneService.SelectLevel(config);
         }
 
         public async UniTask ApplyFontToUI()

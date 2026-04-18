@@ -1,21 +1,23 @@
-using System;
 using Cysharp.Threading.Tasks;
+using Game.Services;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using Zenject;
 
-namespace Game.UI
-{
-    public class MainMenuController : MonoBehaviour, IFontContainer
-    {
+namespace Game.UI {
+    public class MainMenuController : MonoBehaviour, IFontContainer {
         public UIDocument uiDocument;
         private Button _gameButton;
         private Button _exitButton;
         private AssetLoader<Font> fontLoader = null;
+        private IGameService _gameService;
 
+        [Inject]
+        public void Construct(IGameService gameService) {
+            _gameService = gameService;
+        }
 
-        void OnEnable()
-        {
+        void OnEnable() {
             if (fontLoader == null)
             {
                 fontLoader = new AssetLoader<Font>(IFontContainer.FontAssetName);
@@ -34,22 +36,18 @@ namespace Game.UI
             fontLoader.Release();
         }
 
-        private void OnExitButtonClicked()
-        {
+        private void OnExitButtonClicked() {
             Debug.Log("ExitGame");
-            
         }
 
-        private void OnGameButtonClicked()
-        {
+        private void OnGameButtonClicked() {
             Debug.Log("LoadGameScene");
-            GameManager.Instance.ChangeState(GameManager.GameState.Playing);
+            _gameService.ChangeState(GameService.GameState.Playing);
            // SceneManager.Instance.MainScene.
             //SceneManager.Instance.LoadSceneAsync("Level_1", LoadSceneMode.Additive, true).Forget();
         }
 
-        public async UniTask ApplyFontToUI()
-        {
+        public async UniTask ApplyFontToUI() {
             Debug.Log("Загрузить шрифт");
             var font = await fontLoader.LoadAsync();
             _gameButton.style.unityFont = font;

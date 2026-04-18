@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Game.Services;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,15 +10,21 @@ namespace Game
 {
     public class LevelTilesController
     {
+        private const float Sqrt3 = 1.732f;
+        
         private LevelTilesConfig _config;
+        private readonly IAddressablesService _addressablesService;
 
-        public LevelTilesController(LevelTilesConfig defaultConfig)
+        private int _levelIndex = 1;
+        private (int, int) _curTileIndexes;
+        private GameObject _curTile;
+        public Dictionary<(int, int), GameObject> Tiles = new Dictionary<(int, int), GameObject>(4);
+        
+        public LevelTilesController(LevelTilesConfig defaultConfig, IAddressablesService addressablesService)
         {
             _config = defaultConfig;
+            _addressablesService = addressablesService;
         }
-
-        private const float Sqrt3 = 1.732f;
-
 
         private float Height => Sqrt3 * _config.TileSideSize;
         private float Width => 2 * _config.TileSideSize;
@@ -25,10 +32,6 @@ namespace Game
         private float WidthStep => _config.TileSideSize * 3f;
 
 
-        private int _levelIndex = 1;
-        private (int, int) _curTileIndexes;
-        private GameObject _curTile;
-        public Dictionary<(int, int), GameObject> Tiles = new Dictionary<(int, int), GameObject>(4);
 
 
         public async UniTask SetAnotherLevel(LevelTilesConfig config)
@@ -66,7 +69,7 @@ namespace Game
             async UniTask LoadTile()
             {
                 var (x, z) = GetCoords(col, row);
-                var tile = await AddressablesManager.Instance.InstantiateAsync($"{_levelIndex}__{col}_{row}",
+                var tile = await _addressablesService.InstantiateAsync($"{_levelIndex}__{col}_{row}",
                     new Vector3(x, -_config.SpawnDepth, z));
                 Tiles[(col, row)] = tile;
                 await TweenTile(tile, true);
