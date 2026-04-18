@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Game;
 using Game.Services;
-using UnityEngine.SceneManagement;
 using Zenject;
 
 namespace Game.UI
@@ -25,8 +23,7 @@ namespace Game.UI
         public int Row;
     }
 
-    public class SelectLevelController : MonoBehaviour, IFontContainer
-    {
+    public class SelectLevelController : MonoBehaviour, IFontContainer, IInitializable {
         public UIDocument uiDocument;
         public UILevelConfig[] Configs;
         public UITileToggle[] Toggles;
@@ -42,14 +39,17 @@ namespace Game.UI
             _sceneService = sceneService;
         }
 
-        void OnEnable()
+        public void Initialize() {
+            LoadFont();
+        }
+        
+        void LoadFont()
         {
             if (fontLoader == null)
             {
                 fontLoader = new AssetLoader<Font>(IFontContainer.FontAssetName);
                 root = uiDocument.rootVisualElement;
-                foreach (var tileToggle in Toggles)
-                {
+                foreach (var tileToggle in Toggles) {
                     var toggle = root.Q<Toggle>(tileToggle.ToggleName);
                     _toggles.Add(toggle, tileToggle);
                 }
@@ -61,13 +61,11 @@ namespace Game.UI
                 }
             }
 
-            foreach (var pair in _configs)
-            {
+            foreach (var pair in _configs) {
                 pair.Key.clicked += OnLevelClicked(pair.Value);
             }
 
-            foreach (var pair in _toggles)
-            {
+            foreach (var pair in _toggles) {
                 pair.Key.RegisterValueChangedCallback(evt => OnToggleClicked(evt.newValue, pair.Value));
             }
 
@@ -102,30 +100,26 @@ namespace Game.UI
             fontLoader.Release();
         }
 
-        private void OnDestroy()
-        {
+        private void OnDestroy() {
             _configs.Clear();
             _toggles.Clear();
         }
 
-        private Action OnLevelClicked(LevelTilesConfig config)
-        {
+        private Action OnLevelClicked(LevelTilesConfig config) {
             return () => _sceneService.SelectLevel(config);
         }
 
-        public async UniTask ApplyFontToUI()
-        {
-            Debug.Log("Загрузить шрифт");
+        public async UniTask ApplyFontToUI() {
+            Debug.Log("Применить шрифт");
             var font = await fontLoader.LoadAsync();
-            foreach (var button in _configs.Keys)
-            {
+            foreach (var button in _configs.Keys) {
                 button.style.unityFont = font;
             }
 
-            foreach (var toggle in _toggles.Keys)
-            {
+            foreach (var toggle in _toggles.Keys) {
                 toggle.style.unityFont = font;
             }
         }
+
     }
 }
