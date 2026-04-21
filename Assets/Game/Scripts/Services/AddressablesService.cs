@@ -4,9 +4,51 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 using UnityEngine.ResourceManagement.ResourceProviders;
+using Zenject;
 
 namespace Game.Services {
-    public class AddressablesService : IAddressablesService {
+    public class AddressablesService : IAddressablesService
+    {
+        private bool _isInitialized;
+        
+        public async UniTask InitializeAsync() {
+            if (_isInitialized) return;
+            
+            await Addressables.InitializeAsync().Task;
+            _isInitialized = true;
+        }
+        
+        public async UniTask<GameObject> LoadPrefabAsync(string address) {
+            if (!_isInitialized) {
+                await InitializeAsync();
+            }
+
+            var handle = Addressables.LoadAssetAsync<GameObject>(address);
+            try {
+                await handle.Task;
+                return handle.Result;
+            }
+            finally {
+                Addressables.Release(handle);
+            };
+        }
+
+        public UniTask<Texture2D> LoadTextureAsync(string address) {
+            throw new System.NotImplementedException();
+        }
+
+        public UniTask LoadAudioAsync(string address) {
+            throw new System.NotImplementedException();
+        }
+
+        public void Release() {
+            throw new System.NotImplementedException();
+        }
+
+        public async UniTask<GameObject> LoadUIRoot() {
+            return await LoadPrefabAsync("Prefabs/UIRoot");
+        }
+        
         public async UniTask<SceneInstance> LoadSceneAsync(string address, LoadSceneMode loadMode = LoadSceneMode.Single, bool activateOnLoad = true)
         {
             var handle = Addressables.LoadSceneAsync(address, loadMode, activateOnLoad);
@@ -28,6 +70,7 @@ namespace Game.Services {
             var handle = Addressables.UnloadSceneAsync(sceneInstance);
             await handle.ToUniTask();
         }
+
 
         public async UniTask<GameObject> InstantiateAsync(string address, Vector3 position)
         {
@@ -76,5 +119,6 @@ namespace Game.Services {
                 Debug.Log("Префаб выгружен");
             }
         }
+        
     }
 }

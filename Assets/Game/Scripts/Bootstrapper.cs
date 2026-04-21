@@ -7,14 +7,21 @@ using Zenject;
 namespace Game
 {
     public class Bootstrapper : IInitializable {
-        private ISceneService _sceneService;
+        private readonly ISceneService _sceneService;
+        private readonly IAddressablesService _addressablesService;
+
         [Inject]
-        public Bootstrapper(ISceneService sceneService) {
+        public Bootstrapper(IAddressablesService addressablesService, ISceneService sceneService) {
+            _addressablesService = addressablesService;
             _sceneService = sceneService;
         }
         
         public void Initialize() {
-            Debug.LogError("Bootstrapper: Инициализация завершена.");
+            InitializeAsync().Forget();
+        }
+
+        public async UniTask InitializeAsync() {
+            await _addressablesService.InitializeAsync(); 
             LoadNextScene("MainMenu").Forget();
         }
 

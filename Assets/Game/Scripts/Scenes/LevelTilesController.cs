@@ -1,27 +1,22 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Game.Scripts.Scenes;
 using Game.Services;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Game
-{
-    public class LevelTilesController
-    {
+namespace Game {
+    public class LevelTilesController {
         private const float Sqrt3 = 1.732f;
-        
         private LevelTilesConfig _config;
         private readonly IAddressablesService _addressablesService;
 
         private int _levelIndex = 1;
-        private (int, int) _curTileIndexes;
+        private (int col, int row) _curTileIndexes;
         private GameObject _curTile;
-        public Dictionary<(int, int), GameObject> Tiles = new Dictionary<(int, int), GameObject>(4);
+        private Dictionary<(int, int), GameObject> Tiles = new Dictionary<(int, int), GameObject>(4);
         
-        public LevelTilesController(LevelTilesConfig defaultConfig, IAddressablesService addressablesService)
-        {
+        public LevelTilesController(LevelTilesConfig defaultConfig, IAddressablesService addressablesService) {
             _config = defaultConfig;
             _addressablesService = addressablesService;
         }
@@ -30,12 +25,8 @@ namespace Game
         private float Width => 2 * _config.TileSideSize;
         private float HeightStep => Height * 0.5f;
         private float WidthStep => _config.TileSideSize * 3f;
-
-
-
-
-        public async UniTask SetAnotherLevel(LevelTilesConfig config)
-        {
+        
+        public async UniTask SetAnotherLevel(LevelTilesConfig config) {
             _config = config;
             _levelIndex = _config.LevelIndex;
             ClearAll();
@@ -43,31 +34,26 @@ namespace Game
             SelectTile((0, 0));
         }
 
-        private void ClearAll()
-        {
-            foreach (var tile in Tiles.Values)
-            {
+        private void ClearAll() {
+            foreach (var tile in Tiles.Values) {
                 HideTile(tile).Forget();
             }
         }
 
-        private void SelectTile((int, int) indexes)
-        {
+        private void SelectTile((int, int) indexes) {
             _curTile = Tiles[indexes];
             _curTileIndexes = indexes;
         }
 
-        public async UniTask ShowTile(int col, int row)
-        {
-            bool isEvenRow = _curTileIndexes.Item2 % 2 == 0;
-            var deltaCol = _curTileIndexes.Item1 - col;
-            var deltaRow = _curTileIndexes.Item2 - row;
+        public async UniTask ShowTile(int col, int row) {
+            bool isEvenRow = _curTileIndexes.row % 2 == 0;
+            var deltaCol = _curTileIndexes.col - col;
+            var deltaRow = _curTileIndexes.row - row;
 
             UnloadOppositeTile();
             await LoadTile(); //.Forget(ex => Debug.LogError($"Ошибка загрузки плитки: {ex}"));
 
-            async UniTask LoadTile()
-            {
+            async UniTask LoadTile() {
                 var (x, z) = GetCoords(col, row);
                 var tile = await _addressablesService.InstantiateAsync($"{_levelIndex}__{col}_{row}",
                     new Vector3(x, -_config.SpawnDepth, z));
@@ -75,40 +61,30 @@ namespace Game
                 await TweenTile(tile, true);
             }
 
-            void UnloadOppositeTile()
-            {
-                if (deltaCol == 0)
-                {
-                    HideTile(_curTileIndexes.Item1, _curTileIndexes.Item2 - deltaRow).Forget();
+            void UnloadOppositeTile() {
+                if (deltaCol == 0) {
+                    HideTile(_curTileIndexes.col, _curTileIndexes.row - deltaRow).Forget();
                 }
-                else
-                {
-                    if (deltaRow == 0)
-                    {
-                        HideTile(_curTileIndexes.Item1 - deltaCol,
-                            (isEvenRow ? _curTileIndexes.Item2 + 1 : _curTileIndexes.Item2 - 1)).Forget();
+                else {
+                    if (deltaRow == 0) {
+                        HideTile(_curTileIndexes.col - deltaCol,
+                            (isEvenRow ? _curTileIndexes.row + 1 : _curTileIndexes.row - 1)).Forget();
                     }
-                    else
-                    {
-                        HideTile(_curTileIndexes.Item1 - deltaCol, _curTileIndexes.Item2).Forget();
+                    else {
+                        HideTile(_curTileIndexes.col - deltaCol, _curTileIndexes.row).Forget();
                     }
                 }
             }
         }
-
-
-        public async UniTaskVoid HideTile(int col, int row)
-        {
-            if (Tiles.TryGetValue((col, row), out GameObject tile))
-            {
+        
+        public async UniTaskVoid HideTile(int col, int row){
+            if (Tiles.TryGetValue((col, row), out GameObject tile)){
                 await HideTile(tile);
             }
         }
 
-        private async UniTask HideTile(GameObject tile)
-        {
-            if (tile == null)
-            {
+        private async UniTask HideTile(GameObject tile) {
+            if (tile == null) {
                 return;
             }
 
@@ -117,33 +93,30 @@ namespace Game
             tile.Release();
         }
 
-        private (int col, int row) CheckPosition(Vector2 player, float tileSide)
-        {
+        private (int col, int row) CheckPosition(Vector2 player, float tileSide) {
             var position = _curTile.transform.position;
             var deltaZ = player.y - position.z;
             var deltaX = player.x - position.x;
 
             if (Mathf.Abs(deltaZ) > 0.5f * Sqrt3 * tileSide)
-                return (_curTileIndexes.Item1, _curTileIndexes.Item2 + (deltaZ > 0 ? 1 : -1));
+                return (_curTileIndexes.col, _curTileIndexes.row + (deltaZ > 0 ? 1 : -1));
 
             //if (Mathf.Abs(deltaX) <= TileSideSize * 0.5f + (HalfHeight - Mathf.Abs(deltaZ)) * TileSideSize * 0.25f / HalfHeight)
             if (Mathf.Abs(deltaX) <= tileSide * 0.25f - Mathf.Abs(deltaZ) / (Sqrt3 * 2))
                 return _curTileIndexes;
 
-            return (_curTileIndexes.Item1 + (deltaX > 0 ? 1 : -1), _curTileIndexes.Item2 + (deltaZ > 0 ? 0 : -1));
+            return (_curTileIndexes.col + (deltaX > 0 ? 1 : -1), _curTileIndexes.row + (deltaZ > 0 ? 0 : -1));
         }
 
-        private (float, float ) GetCoords(int col, int row)
-        {
+        private (float, float) GetCoords(int col, int row) {
             bool isEvenCol = col % 2 == 0;
             var result = (col * WidthStep / 2f, (isEvenCol ? (Sqrt3 * _config.TileSideSize * 0.5f) : 0) +
                                                 row * Sqrt3 * _config.TileSideSize);
             //Debug.Log($"{col},{row} => {result}");
-            return (result);
+            return result;
         }
 
-        private async UniTask TweenTile(GameObject tile, bool on)
-        {
+        private async UniTask TweenTile(GameObject tile, bool on) {
             Tweener tween =
                 tile.transform.DOMoveY((on ? 0 : -1) * _config.SpawnDepth, _config.Duration);
             await tween.AwaitForComplete();

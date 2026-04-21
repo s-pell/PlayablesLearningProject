@@ -1,28 +1,13 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Game.Core.Configs;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Game.Services;
 using Zenject;
 
-namespace Game.UI
-{
-    [System.Serializable]
-    public struct UILevelConfig
-    {
-        public string ButtonName;
-        public LevelTilesConfig Config;
-    }
-
-    [Serializable]
-    public struct UITileToggle
-    {
-        public string ToggleName;
-        public int Col;
-        public int Row;
-    }
-
+namespace Game.UI {
     public class SelectLevelController : MonoBehaviour, IFontContainer, IInitializable {
         public UIDocument uiDocument;
         public UILevelConfig[] Configs;
@@ -43,10 +28,8 @@ namespace Game.UI
             LoadFont();
         }
         
-        void LoadFont()
-        {
-            if (fontLoader == null)
-            {
+        void LoadFont() {
+            if (fontLoader == null) {
                 fontLoader = new AssetLoader<Font>(IFontContainer.FontAssetName);
                 root = uiDocument.rootVisualElement;
                 foreach (var tileToggle in Toggles) {
@@ -54,8 +37,7 @@ namespace Game.UI
                     _toggles.Add(toggle, tileToggle);
                 }
 
-                foreach (var uiLevelConfig in Configs)
-                {
+                foreach (var uiLevelConfig in Configs) {
                     var levelButton = root.Q<Button>(uiLevelConfig.ButtonName);
                     _configs.Add(levelButton, uiLevelConfig.Config);
                 }
