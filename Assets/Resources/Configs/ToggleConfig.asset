@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf40e199b62840aaaa0c86b383bb85dc, type: 3}
   m_Name: ToggleConfig
   m_EditorClassIdentifier: 
-  Toggles: []
+  Toggles:
+  - ToggleName: toggle_0_0
+    Col: 0
+    Row: 0
+  - ToggleName: toggle_0_1
+    Col: 0
+    Row: 1
+  - ToggleName: toggle_1_1
+    Col: 1
+    Row: 1
+  - ToggleName: toggle_-1_1
+    Col: -1
+    Row: 1

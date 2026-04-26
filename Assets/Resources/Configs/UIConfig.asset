@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40222cf265fc4df5850c3351600f9b05, type: 3}
   m_Name: UIConfig
   m_EditorClassIdentifier: 
-  Configs: []
+  Configs:
+  - ButtonName: level_1
+    Config: {fileID: 11400000, guid: d5f7b7d31c0c51f47ad50ed31ca460f2, type: 2}
+  - ButtonName: level_2
+    Config: {fileID: 11400000, guid: bf1c56c488c3aa448a223b0fa14e600b, type: 2}
